@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="56 116 408 564" fill="none" role="img" aria-label="Военнослужащий">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#33425f"/>
+      <stop offset="0.55" stop-color="#1b2540"/>
+      <stop offset="1" stop-color="#0b0f19"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.32" r="0.62">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rifle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4763"/>
+      <stop offset="1" stop-color="#0b0f19"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0f19" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0b0f19" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="edgeFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b0f19" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0b0f19" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="260" cy="250" rx="250" ry="320" fill="url(#glow)"/>
+
+  <!-- decorative ring with notches -->
+  <circle cx="260" cy="252" r="224" fill="none" stroke="url(#rim)" stroke-width="1.2" stroke-opacity="0.20"/>
+  <circle cx="260" cy="252" r="210" fill="none" stroke="url(#rim)" stroke-width="0.8" stroke-opacity="0.12" stroke-dasharray="2 10"/>
+  <g stroke="url(#rim)" stroke-opacity="0.28" stroke-width="1.4">
+    <path d="M260 18 v-14 M260 486 v14 M26 252 h-14 M494 252 h14"/>
+  </g>
+
+  <!-- faint star watermark -->
+  <path d="M260 96 l9 27 28 1 -22 18 8 27 -23 -16 -23 16 8 -27 -22 -18 28 -1 z" fill="#f59e0b" fill-opacity="0.10"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="262" cy="648" rx="120" ry="18" fill="#000" opacity="0.35"/>
+
+  <g fill="url(#hg)" stroke="url(#rim)" stroke-width="2" stroke-opacity="0.6" stroke-linejoin="round">
+    <!-- legs -->
+    <path d="M232 430 L222 650 q1 12 14 12 l14 0 6-192 12 0 6 192 14 0 q13 0 14-12 L290 430 Z"/>
+    <!-- torso / body armor -->
+    <path d="M204 252 q56 -30 112 0 l18 192 q-74 28 -148 0 Z"/>
+    <!-- arms holding rifle -->
+    <path d="M204 260 q-50 22 -60 78 l13 14 q12-48 55-64 Z"/>
+    <path d="M316 260 q46 16 56 66 l-13 12 q-14-42 -49-54 Z"/>
+    <!-- head + helmet -->
+    <path d="M226 158 q34 -42 68 0 q4 30 -10 52 l-48 0 q-14 -22 -10 -52 Z"/>
+    <path d="M208 192 q52 -44 104 0 l0 -8 q-52 -40 -104 0 Z"/>
+  </g>
+
+  <!-- chest plate highlight -->
+  <path d="M236 286 q24 -12 48 0 l8 150 q-32 12 -64 0 Z" fill="#f59e0b" fill-opacity="0.08" stroke="url(#rim)" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- rifle -->
+  <g stroke="url(#rim)" stroke-opacity="0.6">
+    <rect x="150" y="322" width="220" height="13" rx="6.5" transform="rotate(-18 260 328)" fill="url(#rifle)"/>
+    <rect x="300" y="300" width="13" height="62" rx="6" transform="rotate(-18 306 331)" fill="url(#rifle)"/>
+    <circle cx="150" cy="332" r="6" transform="rotate(-18 260 328)" fill="#0b0f19"/>
+  </g>
+
+  <!-- soft fades blending the figure into the page -->
+  <rect x="56" y="420" width="408" height="260" fill="url(#fade)"/>
+  <rect x="56" y="116" width="120" height="564" fill="url(#edgeFade)"/>
+</svg>

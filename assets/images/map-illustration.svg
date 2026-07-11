@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" fill="none" role="img" aria-label="Карта пункта отбора">
+  <defs>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16223a"/>
+      <stop offset="1" stop-color="#0e1422"/>
+    </linearGradient>
+    <radialGradient id="pinGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="360" rx="16" fill="url(#land)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1f2937" stroke-width="1">
+    <path d="M0 72 H800 M0 144 H800 M0 216 H800 M0 288 H800"/>
+    <path d="M100 0 V360 M200 0 V360 M300 0 V360 M400 0 V360 M500 0 V360 M600 0 V360 M700 0 V360"/>
+  </g>
+
+  <!-- abstract landmass blobs -->
+  <g fill="#0b0f19" opacity="0.55">
+    <path d="M-20 120 q120 -60 240 -10 q120 50 260 0 q140 -50 320 10 v60 q-160 70 -340 20 q-180 -50 -360 -10 q-80 20 -120 -20 Z"/>
+    <path d="M120 300 q140 40 300 -10 q160 -50 360 10 v60 H120 Z" opacity="0.6"/>
+  </g>
+
+  <!-- route -->
+  <path d="M90 300 q120 -70 220 -46 q130 26 210 -64 q60 -52 200 -36" fill="none" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 12"/>
+
+  <!-- pulse rings around pin -->
+  <circle cx="520" cy="150" r="70" fill="url(#pinGlow)"/>
+  <circle cx="520" cy="150" r="26" fill="none" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="2"/>
+  <circle cx="520" cy="150" r="38" fill="none" stroke="#f59e0b" stroke-opacity="0.22" stroke-width="2"/>
+
+  <!-- location pin (teardrop) -->
+  <g transform="translate(520 150)">
+    <path d="M0 -36 C18 -36 32 -22 32 -4 C32 18 0 40 0 40 C0 40 -32 18 -32 -4 C-32 -22 -18 -36 0 -36 Z" fill="#0b0f19" stroke="#f59e0b" stroke-width="2.5"/>
+    <circle cx="0" cy="-4" r="9" fill="#f59e0b"/>
+  </g>
+
+  <text x="556" y="250" fill="#9ca3af" font-family="Inter, sans-serif" font-size="14">ул. Вокзальная, д. 22/2</text>
+</svg>

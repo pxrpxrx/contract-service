@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /tools/
+Disallow: /.git/
+
+Sitemap: https://contract-svo.ru/sitemap.xml
