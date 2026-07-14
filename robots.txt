@@ -4,4 +4,4 @@ Allow: /
 Disallow: /tools/
 Disallow: /.git/
 
-Sitemap: https://contract-svo.ru/sitemap.xml
+Sitemap: https://reshenie-i-kommunikatsii.ru/sitemap.xml
