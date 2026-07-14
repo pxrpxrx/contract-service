@@ -1,5 +1,5 @@
 /* =========================================================
-   КонтрактСВО — редакционная военная эстетика
+   Решение и Коммуникации — сдержанная юридическая эстетика
    Сдержанная, премиальная: уголь/сталь + латунь + парча
    ========================================================= */
 
@@ -136,28 +136,28 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  gap: 24px;
+  gap: 28px;
 }
-.header-cta { margin-left: auto; white-space: nowrap; flex-shrink: 0; padding: 9px 16px; font-size: 13.5px; }
+.header-cta { margin-left: auto; white-space: nowrap; flex-shrink: 0; padding: 8px 14px; font-size: 12.5px; }
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: .04em;
   text-transform: uppercase;
   color: var(--color-text);
 }
-.logo svg { width: 22px; height: 22px; color: var(--color-brass); }
+.logo img { width: 34px; height: 34px; object-fit: contain; flex-shrink: 0; }
 .logo .accent { color: var(--color-brass); }
 
-.nav { display: flex; align-items: center; gap: 4px; }
+.nav { display: flex; align-items: center; gap: 2px; }
 .nav-link {
   position: relative;
-  padding: 8px 14px;
-  font-size: 14px;
+  padding: 7px 10px;
+  font-size: 13px;
   color: var(--color-text-muted);
   letter-spacing: .02em;
   transition: color .2s var(--ease);
@@ -165,7 +165,7 @@ h1, h2, h3, h4 {
 .nav-link::after {
   content: "";
   position: absolute;
-  left: 14px; right: 14px; bottom: 4px;
+  left: 10px; right: 10px; bottom: 3px;
   height: 1px;
   background: var(--color-brass);
   transform: scaleX(0);
@@ -377,19 +377,6 @@ h1, h2, h3, h4 {
   background: linear-gradient(170deg, rgba(200,163,91,.12), rgba(24,30,40,.9));
   border-color: var(--color-brass-deep);
 }
-.payment-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-family: var(--font-display);
-  font-size: 11px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: #1a1407;
-  background: var(--color-brass);
-  padding: 4px 10px;
-  border-radius: 999px;
-}
 .payment-amount {
   font-family: var(--font-display);
   font-size: clamp(24px, 2.6vw, 30px);
@@ -519,12 +506,16 @@ h1, h2, h3, h4 {
 /* ---------- Vacancies ---------- */
 .section-media {
   width: 100%;
-  height: clamp(220px, 32vw, 360px);
+  max-width: 760px;
+  height: auto;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-soft);
-  margin-bottom: clamp(28px, 4vw, 44px);
+  margin: clamp(28px, 4vw, 44px) auto 0;
   filter: saturate(.9);
+  box-shadow: 0 12px 40px -16px rgba(0,0,0,.5);
+  display: block;
 }
 .vacancies-filter {
   display: flex;
@@ -658,13 +649,13 @@ h1, h2, h3, h4 {
 .stages-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 14px;
 }
 .stage-card {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 26px;
+  gap: 14px;
+  padding: 20px;
   background: var(--color-surface);
   border: 1px solid var(--color-border-soft);
   border-radius: var(--radius);
@@ -673,15 +664,15 @@ h1, h2, h3, h4 {
 .stage-card:hover { border-color: var(--color-brass-deep); }
 .stage-number {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-brass);
   line-height: 1;
   flex-shrink: 0;
-  min-width: 52px;
+  min-width: 36px;
 }
-.stage-card h4 { font-size: 17px; color: var(--color-text); margin-bottom: 6px; }
-.stage-card p { font-size: 14px; color: var(--color-text-muted); line-height: 1.55; }
+.stage-card h4 { font-size: 15px; color: var(--color-text); margin-bottom: 4px; }
+.stage-card p { font-size: 13px; color: var(--color-text-muted); line-height: 1.5; }
 
 /* ---------- Documents ---------- */
 .documents-list {
@@ -1055,7 +1046,8 @@ h1, h2, h3, h4 {
   .nav { display: none; }
   .mobile-toggle { display: flex; }
 }
-@media (max-width: 980px) {
+@media (max-width: 960px) {
+  .stages-grid { grid-template-columns: repeat(2, 1fr); }
   .nav { display: none; }
   .nav.open {
     display: flex;
@@ -1082,4 +1074,108 @@ h1, h2, h3, h4 {
   .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; }
   .stage-card { flex-direction: column; gap: 8px; padding: 22px; }
   .stage-number { min-width: 0; font-size: 24px; }
+}
+
+/* ---------- New theme additions (legal / Решение и Коммуникации) ---------- */
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
+.stage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius);
+  transition: border-color .3s var(--ease);
+}
+.stage-card:hover { border-color: var(--color-brass-deep); }
+.stage-number {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-brass);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.stage-card h4 { font-size: 14px; color: var(--color-text); margin-bottom: 0; }
+.stage-card p { font-size: 12.5px; color: var(--color-text-muted); line-height: 1.5; }
+.section-media-wrap {
+  display: flex;
+  justify-content: center;
+}
+.section-media-wrap .section-media { margin-bottom: 0; width: min(100%, 880px); }
+
+/* ---------- Chargeback visual ---------- */
+.chargeback-visual {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+}
+.chargeback-visual img {
+  width: 100%;
+  height: clamp(280px, 42vw, 520px);
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+.chargeback-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,17,22,.35) 0%, rgba(14,17,22,.72) 100%);
+  z-index: 1;
+  border-radius: var(--radius-lg);
+}
+.chargeback-cards {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 48px);
+  border-radius: var(--radius-lg);
+}
+.chargeback-cards .payments-grid {
+  width: 100%;
+  max-width: var(--maxw);
+}
+
+/* ---------- Payment card backgrounds ---------- */
+.payment-card {
+  position: relative;
+  overflow: hidden;
+}
+.payment-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/interior.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+.payment-card > * {
+  position: relative;
+  z-index: 1;
+}
+.payment-card:nth-child(1)::before { background-position: 0% 0%; }
+.payment-card:nth-child(2)::before { background-position: 100% 0%; }
+.payment-card:nth-child(3)::before { background-position: 0% 100%; }
+.payment-card:nth-child(4)::before { background-position: 100% 100%; }
+
+@media (max-width: 1100px) {
+  .stages-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .stages-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .stages-grid { grid-template-columns: 1fr; }
 }
