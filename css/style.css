@@ -243,7 +243,7 @@ h1, h2, h3, h4 {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: 128px 0 96px;
+  padding: 128px 0 56px;
   overflow: hidden;
   background: var(--color-bg);
 }
@@ -1073,8 +1073,8 @@ h1, h2, h3, h4 {
   .salary-row { flex-wrap: wrap; }
   .salary-apply { margin-left: 0; width: 100%; }
   .salary-apply .btn { width: 100%; }
-  .hero-actions { flex-wrap: wrap; gap: 16px; align-items: flex-start; }
-  .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; margin-top: 16px; }
+  .hero-actions { flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+  .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; }
   .stage-card { flex-direction: column; gap: 8px; padding: 22px; }
   .stage-number { min-width: 0; font-size: 24px; }
 }
