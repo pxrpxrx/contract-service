@@ -1115,33 +1115,29 @@ h1, h2, h3, h4 {
 
 /* ---------- Chargeback visual ---------- */
 .chargeback-visual {
-  position: relative;
   width: 100%;
   margin-top: 32px;
 }
 .chargeback-visual img {
   width: 100%;
-  height: clamp(280px, 42vw, 520px);
-  object-fit: cover;
+  height: auto;
   display: block;
   border-radius: var(--radius-lg);
 }
 .chargeback-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(14,17,22,.35) 0%, rgba(14,17,22,.72) 100%);
-  z-index: 1;
-  border-radius: var(--radius-lg);
+  display: none;
 }
 .chargeback-cards {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  position: relative;
+  inset: auto;
+  margin-top: 24px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: clamp(16px, 4vw, 48px);
-  border-radius: var(--radius-lg);
+  padding: 0;
+  border-radius: 0;
+}
+.chargeback-visual .payments-grid {
+  margin-top: 24px;
 }
 .chargeback-cards .payments-grid {
   width: 100%;
@@ -1188,5 +1184,7 @@ h1, h2, h3, h4 {
   backdrop-filter: blur(10px);
 }
 .chargeback-cards .payment-card:hover {
-  background: rgba(31, 39, 51, 0.95);
+  background: rgba(35, 42, 55, 0.95);
+  border-color: var(--color-brass);
+  box-shadow: 0 0 20px rgba(200, 163, 91, 0.15);
 }
