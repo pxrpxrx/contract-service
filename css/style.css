@@ -75,11 +75,11 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-.section { padding: clamp(72px, 9vw, 120px) 0; position: relative; }
+.section { padding: clamp(48px, 5vw, 72px) 0; position: relative; }
 
 .section-head {
   max-width: 760px;
-  margin-bottom: clamp(40px, 6vw, 64px);
+  margin-bottom: clamp(24px, 4vw, 40px);
 }
 
 .eyebrow {
@@ -439,7 +439,6 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 28px;
 }
 .benefit-card {
   padding: 26px;
@@ -478,7 +477,6 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  margin-top: 28px;
 }
 .review-card {
   padding: 28px 26px;
@@ -1075,7 +1073,7 @@ h1, h2, h3, h4 {
   .salary-apply { margin-left: 0; width: 100%; }
   .salary-apply .btn { width: 100%; }
   .hero-actions { flex-wrap: wrap; gap: 16px; align-items: flex-start; }
-  .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; margin-top: 14px; }
+  .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; }
   .stage-card { flex-direction: column; gap: 8px; padding: 22px; }
   .stage-number { min-width: 0; font-size: 24px; }
 }
@@ -1182,4 +1180,15 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 600px) {
   .stages-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 961px) {
+  .chargeback-visual .payments-grid {
+    margin-top: 28px;
+  }
+  .chargeback-visual .chargeback-cards {
+    position: relative;
+    inset: auto;
+    margin-top: 28px;
+  }
 }
