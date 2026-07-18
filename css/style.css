@@ -110,6 +110,7 @@ h1, h2, h3, h4 {
 
 .section-subtitle {
   margin-top: 18px;
+  margin-bottom: clamp(24px, 4vw, 40px);
   color: var(--color-text-muted);
   font-size: clamp(15px, 1.6vw, 17px);
   max-width: 620px;
@@ -372,7 +373,7 @@ h1, h2, h3, h4 {
   will-change: transform;
   backface-visibility: hidden;
 }
-.payment-card:hover { transform: translateY(-4px); border-color: var(--color-brass-deep); }
+.payment-card:hover { transform: translateY(-4px); border-color: var(--color-brass-deep); background: var(--color-surface-2); }
 .payment-icon { width: 30px; height: 30px; color: var(--color-brass); margin-bottom: 6px; }
 .payment-icon svg { width: 100%; height: 100%; }
 .payment-card-highlight {
@@ -1182,13 +1183,10 @@ h1, h2, h3, h4 {
   .stages-grid { grid-template-columns: 1fr; }
 }
 
-@media (min-width: 961px) {
-  .chargeback-visual .payments-grid {
-    margin-top: 28px;
-  }
-  .chargeback-visual .chargeback-cards {
-    position: relative;
-    inset: auto;
-    margin-top: 28px;
-  }
+.chargeback-cards .payment-card {
+  background: rgba(24, 30, 40, 0.88);
+  backdrop-filter: blur(10px);
+}
+.chargeback-cards .payment-card:hover {
+  background: rgba(31, 39, 51, 0.95);
 }
