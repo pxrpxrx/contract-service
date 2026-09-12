@@ -139,11 +139,13 @@ h1, h2, h3, h4 {
   height: 72px;
   gap: 28px;
 }
-.header-cta { margin-left: auto; white-space: nowrap; flex-shrink: 0; padding: 8px 14px; font-size: 12.5px; }
+.header-cta { margin-left: auto; white-space: nowrap; flex-shrink: 0; padding: 8px 14px; font-size: 12.5px; letter-spacing: .02em; }
+.header-right .header-cta { font-family: var(--font-sans); font-weight: 700; }
 .logo {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 17px;
@@ -159,6 +161,7 @@ h1, h2, h3, h4 {
   position: relative;
   padding: 7px 10px;
   font-size: 13px;
+  white-space: nowrap;
   color: var(--color-text-muted);
   letter-spacing: .02em;
   transition: color .2s var(--ease);
@@ -324,7 +327,7 @@ h1, h2, h3, h4 {
 .hero-actions {
   margin-top: 32px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 24px;
   flex-wrap: nowrap;
 }
@@ -334,10 +337,11 @@ h1, h2, h3, h4 {
   padding-left: 16px;
   border-left: 2px solid var(--color-brass);
   font-size: 15px;
-  color: #cdd2d9;
+  color: var(--color-text-muted);
   line-height: 1.5;
   letter-spacing: .01em;
   flex-shrink: 0;
+  margin-top: 3px;
 }
 
 /* ---------- Generic card ---------- */

@@ -55,15 +55,15 @@
     [data-theme="dark"] .theme-toggle .icon-moon{display:none}
     [data-theme="light"] .theme-toggle .icon-sun{display:none}
     [data-theme="light"] .theme-toggle .icon-moon{display:block}
-    [data-theme="light"]{--color-bg:#f4f1ea;--color-bg-2:#ede8dd;--color-surface:#ffffff;--color-surface-2:#f9f7f3;--color-border:#d6d0c4;--color-border-soft:#e8e3d8;--color-text:#1a1d23;--color-text-muted:#5a5548;--color-text-faint:#8a8578;--color-paper:#ffffff;--color-paper-ink:#1a1d23}
+    [data-theme="light"]{--color-bg:#f4f1ea;--color-bg-2:#ede8dd;--color-surface:#ffffff;--color-surface-2:#f9f7f3;--color-border:#d6d0c4;--color-border-soft:#e8e3d8;--color-text:#1a1d23;--color-text-muted:#5a5548;--color-text-faint:#8a8578;--color-paper:#ffffff;--color-paper-ink:#1a1d23;--color-brass:#8a6a30;--color-brass-2:#9c7c3e;--color-brass-deep:#6f5626}
     [data-theme="light"] .header{background:rgba(244,241,234,0.92)}
-    [data-theme="light"] .logo-icon{filter:invert(1) brightness(0.92)};border-bottom-color:var(--color-border-soft)}
+    [data-theme="light"] .logo-icon{filter:invert(1) brightness(0.92)}
     [data-theme="light"] .btn-primary{background:var(--color-brass);color:#1a1407}
     [data-theme="light"] .badge{border-color:var(--color-brass-deep);color:var(--color-brass-deep)}
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:32px}
     .about-text p{color:var(--color-text-muted);font-size:15px;line-height:1.7;margin-bottom:16px}
     .about-image{border-radius:var(--radius);overflow:hidden;border:1px solid var(--color-border-soft)}
-    .about-image img{width:100%;height:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+    .about-image img{width:100%;height:auto;display:block;object-fit:contain}
     .result-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--color-border-soft)}
     .result-item .result-number{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:600;color:var(--color-brass);letter-spacing:.01em}
     .result-item .result-label{font-size:13px;color:var(--color-text-muted);margin-top:4px}

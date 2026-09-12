@@ -303,8 +303,8 @@
       .from('.hero-title', { opacity: 0, y: 30, duration: 0.7 }, '-=0.35')
       .from('.hero-subtitle', { opacity: 0, y: 20, duration: 0.6 }, '-=0.4')
       .from('.hero-stats', { opacity: 0, y: 20, duration: 0.6 }, '-=0.35')
-      .from('#heroApplyBtn', { opacity: 0, y: 20, duration: 0.6 }, '-=0.3')
-      .from('.hero-note', { opacity: 0, y: 10, duration: 0.5 }, '-=0.2');
+      .from('#heroApplyBtn', { opacity: 0, duration: 0.6 }, '-=0.3')
+      .from('.hero-note', { opacity: 0, duration: 0.5 }, '-=0.2');
   };
 
   document.addEventListener('DOMContentLoaded', () => {
