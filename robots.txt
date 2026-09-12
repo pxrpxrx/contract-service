@@ -4,4 +4,4 @@ Allow: /
 Disallow: /tools/
 Disallow: /.git/
 
-Sitemap: https://reshenie-i-kommunikatsii.ru/sitemap.xml
+Sitemap: https://sol-and.com/sitemap.xml

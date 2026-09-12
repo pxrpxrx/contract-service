@@ -231,7 +231,6 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
 .mobile-toggle span {
@@ -1073,7 +1072,10 @@ h1, h2, h3, h4 {
   .salary-row { flex-wrap: wrap; }
   .salary-apply { margin-left: 0; width: 100%; }
   .salary-apply .btn { width: 100%; }
+  .header-cta { padding: 6px 10px; font-size: 11px; }
   .hero-actions { flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+  .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; }
+}
   .hero-note { flex-shrink: 1; max-width: 100%; width: 100%; font-size: 14px; padding-left: 14px; }
   .stage-card { flex-direction: column; gap: 8px; padding: 22px; }
   .stage-number { min-width: 0; font-size: 24px; }
