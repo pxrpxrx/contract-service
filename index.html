@@ -17,8 +17,8 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Решение и Коммуникация">
     <meta property="og:title" content="Решение и Коммуникация — Юридическая компания Санкт-Петербург">
@@ -56,13 +56,14 @@
     [data-theme="light"] .theme-toggle .icon-sun{display:none}
     [data-theme="light"] .theme-toggle .icon-moon{display:block}
     [data-theme="light"]{--color-bg:#f4f1ea;--color-bg-2:#ede8dd;--color-surface:#ffffff;--color-surface-2:#f9f7f3;--color-border:#d6d0c4;--color-border-soft:#e8e3d8;--color-text:#1a1d23;--color-text-muted:#5a5548;--color-text-faint:#8a8578;--color-paper:#ffffff;--color-paper-ink:#1a1d23}
-    [data-theme="light"] .header{background:rgba(244,241,234,0.92);border-bottom-color:var(--color-border-soft)}
+    [data-theme="light"] .header{background:rgba(244,241,234,0.92)}
+    [data-theme="light"] .logo-icon{filter:invert(1) brightness(0.92)};border-bottom-color:var(--color-border-soft)}
     [data-theme="light"] .btn-primary{background:var(--color-brass);color:#1a1407}
     [data-theme="light"] .badge{border-color:var(--color-brass-deep);color:var(--color-brass-deep)}
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:32px}
     .about-text p{color:var(--color-text-muted);font-size:15px;line-height:1.7;margin-bottom:16px}
     .about-image{border-radius:var(--radius);overflow:hidden;border:1px solid var(--color-border-soft)}
-    .about-image img{width:100%;height:auto;display:block}
+    .about-image img{width:100%;height:100%;display:block;aspect-ratio:4/3;object-fit:cover}
     .result-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--color-border-soft)}
     .result-item .result-number{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:600;color:var(--color-brass);letter-spacing:.01em}
     .result-item .result-label{font-size:13px;color:var(--color-text-muted);margin-top:4px}
@@ -71,14 +72,14 @@
     .trust-card:hover{border-color:var(--color-brass-deep);transform:translateY(-3px)}
     .trust-card h4{font-family:var(--font-display);font-size:15px;font-weight:600;text-transform:uppercase;color:var(--color-text);margin-bottom:8px}
     .trust-card p{font-size:14px;color:var(--color-text-muted);line-height:1.6;margin:0}
-    .faq-item{border-bottom:1px solid var(--color-border-soft)}
-    .faq-item:first-child{border-top:1px solid var(--color-border-soft)}
-    .faq-question{width:100%;background:none;border:none;padding:18px 0;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--color-text)}
+    .faq-item{background:var(--color-surface);border:1px solid var(--color-border-soft);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+    
+    .faq-question{width:100%;background:none;border:none;padding:18px 24px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--color-text)}
     .faq-question:hover{color:var(--color-brass)}
     .faq-question svg{width:18px;height:18px;flex-shrink:0;transition:transform .3s}
     .faq-question.open svg{transform:rotate(180deg)}
     .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}
-    .faq-answer-inner{padding:0 0 18px;font-size:14px;color:var(--color-text-muted);line-height:1.7}
+    .faq-answer-inner{padding:0 24px 22px;font-size:14px;color:var(--color-text-muted);line-height:1.7}
     .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--color-surface);border-top:1px solid var(--color-border);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;transform:translateY(100%);transition:transform .4s ease}
     .cookie-banner.show{transform:translateY(0)}
     .cookie-text{font-size:13px;color:var(--color-text-muted);line-height:1.6;flex:1}
@@ -142,7 +143,7 @@
                     <span class="badge badge-gold">Закон</span>
                     <span class="badge badge-gold">Результат</span>
                 </div>
-                <h1 class="hero-title">Юридическая компания<br><span class="text-gold">«Решение и Коммуникация»</span></h1>
+                <h1 class="hero-title">Юридическая компания <span class="text-gold">«Решение и Коммуникация»</span></h1>
                 <p class="hero-subtitle">Полный спектр услуг для физических и юридических лиц: возврат навязанных банковских услуг, банкротство, споры, недвижимость и сопровождение бизнеса. Работаем в Санкт-Петербурге и по всей России — дистанционно.</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary apply-trigger" id="heroApplyBtn">Записаться на консультацию</button>
