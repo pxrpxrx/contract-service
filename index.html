@@ -58,8 +58,9 @@
     [data-theme="light"]{--color-bg:#f4f1ea;--color-bg-2:#ede8dd;--color-surface:#ffffff;--color-surface-2:#f9f7f3;--color-border:#d6d0c4;--color-border-soft:#e8e3d8;--color-text:#1a1d23;--color-text-muted:#5a5548;--color-text-faint:#8a8578;--color-paper:#ffffff;--color-paper-ink:#1a1d23;--color-brass:#8a6a30;--color-brass-2:#9c7c3e;--color-brass-deep:#6f5626}
     [data-theme="light"] .header{background:rgba(244,241,234,0.92)}
     [data-theme="light"] .logo-icon{filter:invert(1) brightness(0.92)}
-    [data-theme="light"] .btn-primary{background:var(--color-brass);color:#1a1407}
+    [data-theme="light"] .btn-primary{background:#2b261d;color:#f4f1ea}
     [data-theme="light"] .badge{border-color:var(--color-brass-deep);color:var(--color-brass-deep)}
+    [data-theme="light"] .stat-card{background:rgba(255,255,255,.7)}
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:32px}
     .about-text p{color:var(--color-text-muted);font-size:15px;line-height:1.7;margin-bottom:16px}
     .about-image{border-radius:var(--radius);overflow:hidden;border:1px solid var(--color-border-soft)}
@@ -134,7 +135,7 @@
 
     <main>
     <section class="hero" id="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-bg" style="background-image:url('assets/images/hero-bg.jpg')"></div></div>
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badges">
@@ -188,15 +189,10 @@
             <div class="section-head"><span class="eyebrow">О компании</span><h2 class="section-title">Спектр услуг — для граждан и для бизнеса</h2></div>
             <div class="about-grid">
                 <div><p>Мы — юридическая компания из Санкт-Петербурга. Начинали со специализации на возврате навязанных банковских услуг и защите прав потребителей, а сегодня ведём дела по полному спектру права.</p><p>В команде — юристы и бухгалтеры с опытом в судах любой инстанции, переговорах с финансовыми организациями и сопровождении бизнеса. Честно оцениваем перспективы и не берёмся за безнадёжные дела.</p><p>Работаем с клиентами из любой точки России: документы принимаем в электронном виде, претензии и иски готовим удалённо.</p></div>
-                <div class="about-image"><img src="assets/images/service.jpg" alt="Офис юридической компании Решение и Коммуникация" loading="lazy" width="600" height="400"></div>
+                <div class="about-image"><img src="assets/images/interior.png" alt="Офис юридической компании Решение и Коммуникация" loading="lazy" width="600" height="337"></div>
             </div>
-            <div class="result-bar">
-                <div class="result-item"><div class="result-number">12</div><div class="result-label">направлений юридической помощи</div></div>
-                <div class="result-item"><div class="result-number">с 2018</div><div class="result-label">практикуем в Санкт-Петербурге</div></div>
-                <div class="result-item"><div class="result-number">по всей РФ</div><div class="result-label">работаем дистанционно</div></div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <section class="section" id="process">
         <div class="container">
@@ -256,6 +252,18 @@
             </div>
         </div>
     </section>
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="cta-band">
+                <img src="assets/images/interior.png" alt="Офис юридической компании Решение и Коммуникация">
+                <div class="cta-content">
+                    <h2>Навязали услугу банка? <span class="text-gold">Вернём деньги</span> — запишитесь на консультацию.</h2>
+                    <button class="btn btn-primary apply-trigger">Записаться на консультацию</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </main>
 
     <footer class="footer">
