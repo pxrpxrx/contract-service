@@ -106,13 +106,14 @@
     @media(max-width:400px){.header-cta{font-size:10px;padding:5px 6px}}
 
 
-.header-right .header-cta{background:#ffffff;color:#111111;border:1px solid var(--color-brass);position:relative;overflow:hidden}
+.header-right .header-cta{border:1px solid var(--color-brass);position:relative;overflow:hidden}
 [data-theme="light"] .header-right .header-cta{background:#ffffff;color:#111111}
 .header-right .header-cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(200,163,91,.65),transparent);transform:skewX(-20deg);animation:ctaShine 2.6s infinite;pointer-events:none}
 @keyframes ctaShine{0%{left:-60%}60%,100%{left:130%}}
-#heroApplyBtn{background:#ffffff;color:var(--color-brass);border:1px solid var(--color-brass)}
-[data-theme="light"] #heroApplyBtn{background:#ffffff;color:var(--color-brass)}
+
+[data-theme="light"] #heroApplyBtn{background:linear-gradient(135deg,#c9a44f,#a87f2f);color:#1a1407;border:1px solid #8a6a30;box-shadow:0 5px 16px rgba(138,106,48,.35);font-family:var(--font-sans);font-weight:700;text-shadow:none} [data-theme="light"] #heroApplyBtn:hover{background:linear-gradient(135deg,#d8b765,#b8903a);box-shadow:0 7px 22px rgba(138,106,48,.45)}
 [data-theme="light"] .hero-note{color:var(--color-text)}
+                    [data-theme="light"] .hero-subtitle{color:var(--color-text)}
 [data-theme="light"] .badge{background:rgba(255,255,255,.7)}
 [data-theme="light"] .map-address{background:#ffffff;color:#1a1d23;border-color:var(--color-brass)}
 .hero-support{display:block;margin-top:12px;font-size:14px;color:var(--color-text-muted);font-weight:500}
@@ -266,7 +267,7 @@
             </div>
         </div>
     </section>
-    <section class="section" style="padding-top:0;">
+    <section class="section">
         <div class="container">
             <div class="cta-band">
                 <img src="assets/images/interior.png" alt="Офис юридической компании Решение и Коммуникация">
