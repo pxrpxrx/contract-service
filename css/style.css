@@ -1057,6 +1057,8 @@ h1, h2, h3, h4 {
   .mobile-toggle { display: flex; }
 }
 @media (max-width: 960px) {
+  .header-right .theme-toggle { display: none; }
+  .nav.open .nav-theme-toggle { display: flex; align-self: flex-end; margin-bottom: 10px; }
   .stages-grid { grid-template-columns: repeat(2, 1fr); }
   .nav { display: none; }
   .nav.open {

@@ -51,6 +51,8 @@
     .theme-toggle{background:none;border:none;cursor:pointer;padding:6px;border-radius:var(--radius);transition:background .2s}
     .theme-toggle:hover{background:var(--color-surface)}
     .theme-toggle svg{width:20px;height:20px;stroke:var(--color-text-muted);fill:none;stroke-width:1.5}
+    .nav-theme-toggle{display:none}
+    .hs-badge{flex-shrink:0;padding:2px 7px;font-size:11px;font-weight:700;letter-spacing:.06em;line-height:1.4;color:var(--color-bg);background:var(--color-brass);border-radius:4px}
     [data-theme="dark"] .theme-toggle .icon-sun{display:block}
     [data-theme="dark"] .theme-toggle .icon-moon{display:none}
     [data-theme="light"] .theme-toggle .icon-sun{display:none}
@@ -116,8 +118,8 @@
                     [data-theme="light"] .hero-subtitle{color:var(--color-text)}
 [data-theme="light"] .badge{background:rgba(255,255,255,.7)}
 [data-theme="light"] .map-address{background:#ffffff;color:#1a1d23;border-color:var(--color-brass)}
-.hero-support{display:block;margin-top:12px;font-size:14px;color:var(--color-text-muted);font-weight:500}
-[data-theme="light"] .hero-support{color:var(--color-text)}
+.hero-support{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 14px;font-size:13.5px;font-weight:600;color:var(--color-brass-2);background:rgba(200,163,91,.08);border:1px solid var(--color-brass-deep);border-radius:6px}
+[data-theme="light"] .hero-support{color:var(--color-brass-deep);background:rgba(255,255,255,.65)}
 </style>
 
 </head>
@@ -129,6 +131,10 @@
                 <span class="logo-text">Решение и <span class="logo-accent">Коммуникация</span></span>
             </a>
             <nav class="nav" id="nav">
+                <button class="theme-toggle nav-theme-toggle" id="themeToggleMobile" aria-label="Переключить тему">
+                    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
                 <a href="#services" class="nav-link">Услуги</a>
                 <a href="#about" class="nav-link">О компании</a>
                 <a href="#process" class="nav-link">Как работаем</a>
@@ -164,7 +170,7 @@
                     <button class="btn btn-primary apply-trigger" id="heroApplyBtn">Записаться на консультацию</button>
                     <span class="hero-note">Честная оценка перспектив. Прозрачная работа.</span>
                 </div>
-                <span class="hero-support">Круглосуточная поддержка — если вопрос срочный, звоните в любое время.</span>
+                <span class="hero-support"><span class="hs-badge">24/7</span>Круглосуточная поддержка — если вопрос срочный, звоните в любое время.</span>
             </div>
             <div class="hero-stats">
                 <div class="stat-card"><div class="stat-number">12</div><span class="stat-label">направлений юридической помощи</span></div>
@@ -203,7 +209,7 @@
         <div class="container">
             <div class="section-head"><span class="eyebrow">О компании</span><h2 class="section-title">Спектр услуг — для граждан и для бизнеса</h2></div>
             <div class="about-grid">
-                <div><p>Мы — юридическая компания из Санкт-Петербурга. Начинали со специализации на возврате навязанных банковских услуг и защите прав потребителей, а сегодня ведём дела по полному спектру права.</p><p>В команде — юристы и бухгалтеры с опытом в судах любой инстанции, переговорах с финансовыми организациями и сопровождении бизнеса. Честно оцениваем перспективы и не берёмся за безнадёжные дела.</p><p>Работаем с клиентами из любой точки России: документы принимаем в электронном виде, претензии и иски готовим удалённо.</p></div>
+                <div class="about-text"><p>Мы — юридическая компания из Санкт-Петербурга. Начинали со специализации на возврате навязанных банковских услуг и защите прав потребителей, а сегодня ведём дела по полному спектру права.</p><p>В команде — юристы и бухгалтеры с опытом в судах любой инстанции, переговорах с финансовыми организациями и сопровождении бизнеса. Честно оцениваем перспективы и не берёмся за безнадёжные дела.</p><p>Работаем с клиентами из любой точки России: документы принимаем в электронном виде, претензии и иски готовим удалённо.</p></div>
                 <div class="about-image"><img src="assets/images/interior.png" alt="Офис юридической компании Решение и Коммуникация" loading="lazy" width="600" height="337"></div>
             </div>
             </div>
@@ -336,13 +342,14 @@
     <script src="js/site2.js" defer></script>
     <script>
     (function(){
-        var btn=document.getElementById('themeToggle');
-        if(btn){btn.addEventListener('click',function(){
-            var cur=document.documentElement.getAttribute('data-theme');
-            var next=cur==='dark'?'light':'dark';
-            document.documentElement.setAttribute('data-theme',next);
-            try{localStorage.setItem('sol-theme',next)}catch(e){}
-        })}
+        document.querySelectorAll('.theme-toggle').forEach(function(btn){
+            btn.addEventListener('click',function(){
+                var cur=document.documentElement.getAttribute('data-theme');
+                var next=cur==='dark'?'light':'dark';
+                document.documentElement.setAttribute('data-theme',next);
+                try{localStorage.setItem('sol-theme',next)}catch(e){}
+            });
+        });
     })();
     document.querySelectorAll('.faq-question').forEach(function(q){
         q.addEventListener('click',function(){
